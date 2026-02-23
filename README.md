@@ -1,14 +1,33 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/DYmcfdSm)
-# 20242-pec-3
+# 💻 PEC 3 - Programación en JavaScript para Programadores
 
-## <img class="flag-img" width="20px" height="auto" src="https://flagicons.lipis.dev/flags/4x3/es-ct.svg" alt="Flag of Catalonia"> PAC 3
+Este repositorio contiene la solución a la **PEC 3** de la asignatura **Programación en JavaScript para Programadores** de la UOC. 
 
-Aquest és el repositori de la PAC 3 de l'assignatura Programació en Javascript per a Programadors.
+El objetivo principal de esta práctica es dominar las diferentes técnicas de programación asíncrona que ofrece JavaScript, manejando correctamente el flujo de ejecución, el consumo de datos y el control de errores.
 
-Trobaràs l'enunciat amb els exercicis a realitzar en el fitxer `README_ca.md`. Segueix les indicacions que et donem en l'enunciat per realitzar la PAC.
+## 🧠 Conceptos aplicados en la práctica
 
-## <img class="flag-img" width="20px" height="auto" src="https://flagicons.lipis.dev/flags/4x3/es.svg" alt="Flag of Spain"> PEC 3
+La PEC consta de 7 ejercicios donde se han puesto en práctica los siguientes enfoques de asincronía:
 
-Este es el repositorio de la PEC 3 de la asignatura Programación en JavaScript para Programadores.
+1. **Callbacks (`processOrders`):** Creación de funciones de orden superior que delegan el resultado y manejo de errores a funciones callback pasadas por parámetro.
+2. **Promesas y Temporizadores (`fetchProductStock`):** Creación manual de instancias de `Promise` gestionando las resoluciones (`resolve`) y rechazos (`reject`), combinadas con simulaciones de latencia (`setTimeout`).
+3. **Encadenamiento de Promesas (`getOrderDetails`):** Resolución de la asincronía y el flujo de datos dependiente usando la sintaxis `.then()` y el manejo centralizado de errores con `.catch()`.
+4. **Async / Await (`fetchAsyncData`):** Consumo de promesas utilizando un enfoque de código más lineal e imperativo mediante `async/await` y bloques `try/catch` para el control de excepciones.
+5. **Procesamiento de múltiples promesas (`processPendingOrders`):** Iteración de llamadas asíncronas para el procesamiento secuencial de una colección de datos (pedidos) evaluando los posibles errores individuales.
+6. **Refactorización a Async/Await (`getOrderDetailsAsync`):** Transformación de código de encadenamiento de promesas complejo al paradigma más moderno y legible de ES8.
+7. **Procesos en segundo plano (`createShippingManager`):** *Ejercicio avanzado.* Implementación de funciones cíclicas (polling) asíncronas, aplicando el patrón de encapsulamiento mediante cierres (*closures*) para proteger y consultar el estado interno del ciclo de vida de los envíos.
 
-Encontrarás el enunciado con los ejercicios a realizar en el fichero `README_es.md`. Sigue las indicaciones que te damos en el enunciado para realizar la PEC.
+## 🚀 Instalación y ejecución de tests
+
+Para revisar y ejecutar el código fuente en un entorno local, asegúrate de tener [Node.js](https://nodejs.org/es) instalado en tu sistema.
+
+1. **Instalación de las dependencias del proyecto:**
+   ```bash
+   npm install
+   ```
+   (También se puede lanzar la instalación con el alias ```npm i```)
+
+2. **Ejecuta la batería de pruebas (Jest):**
+   ```bash
+   npm run test
+   ```
+   (También se pueden lanzar los tests con el alias ```npm t```)
