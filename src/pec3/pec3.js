@@ -2,14 +2,13 @@
  * Exercise 1: Using callbacks
  */
 function processOrders(orders, callback) {
-  if (orders) {
+  if (Array.isArray(orders)) {
     let statusObject = {};
     for (const order of orders) {
       if (
+        order &&
         typeof order === "object" &&
-        order.id &&
         typeof order.id === "number" &&
-        order.status &&
         typeof order.status === "string"
       ) {
         if (!statusObject[order.status]) {
@@ -46,7 +45,7 @@ function fetchProductStock(productId) {
       } else {
         return reject(new Error("Invalid product id"));
       }
-    });
+    }, 300);
   });
 }
 
